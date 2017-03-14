@@ -74,7 +74,7 @@ namespace QLGVHS.GUI
         }
         private void btnF1_Click(object sender, EventArgs e)
         {
-            Process.Start(@"http://quanlygvhs.comli.com/");
+            Process.Start(@"http://qlgvhs.herobo.com/");
         }
 
 
@@ -91,7 +91,7 @@ namespace QLGVHS.GUI
 
         private void btnHuongdan_Click(object sender, EventArgs e)
         {
-            Process.Start(@"http://quanlygvhs.comli.com/");
+            Process.Start(@"http://qlgvhs.herobo.com/");
         }
 
         private void btnTkb_Click(object sender, EventArgs e)
