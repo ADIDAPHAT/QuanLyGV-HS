@@ -1,0 +1,92 @@
+*{
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+.header{
+	background-color:#4CAF50;
+	text-align:center;
+	padding-top:30px;
+	color:White;
+	font-family: Helvetica, Arial, sans-serif;
+	width:100%;
+	height:70px;
+}
+.container{
+	padding-top:10px;
+	width:1180px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:20px;
+	margin:auto;
+	
+}
+.a1{
+	background-color:#e9ebee;
+}
+.container .frmTaikhoan img{
+	padding-left:400px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.container .frmMain img{
+	padding-left:300px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.container .Hocsinh img{
+	padding-left:150px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.container .Hocsinh ul li{
+	padding-left:100px;
+	list-style:none;
+	padding-top:20px;
+}
+.container .Giaovien img{
+	padding-left:250px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.container .Giaovien ul li{
+	padding-left:100px;
+	list-style:none;
+	padding-top:20px;
+}
+.container .DKGD img{
+	padding-left:300px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.container .DKGD ul li{
+	padding-left:100px;
+	list-style:none;
+	padding-top:20px;
+}
+.container .TKB img{
+	padding-left:100px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.container .TKB ul li{
+	padding-left:100px;
+	list-style:none;
+	padding-top:20px;
+}
+.container .Quantri img{
+	padding-left:300px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.container .Quantri ul li{
+	padding-left:100px;
+	list-style:none;
+	padding-top:20px;
+}
+.footer {
+	width:100%;
+	height:80px;
+	text-align:center;
+	color:red;
+	
+}
