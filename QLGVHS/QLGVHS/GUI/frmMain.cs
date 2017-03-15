@@ -92,6 +92,7 @@ namespace QLGVHS.GUI
         private void btnHuongdan_Click(object sender, EventArgs e)
         {
             Process.Start(@"http://qlgvhs.herobo.com/");
+            
         }
 
         private void btnTkb_Click(object sender, EventArgs e)
