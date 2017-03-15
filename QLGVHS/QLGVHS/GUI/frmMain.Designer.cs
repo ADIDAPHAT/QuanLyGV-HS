@@ -90,6 +90,7 @@
             this.btnHuongdan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnHuongdan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnHuongdan.UseVisualStyleBackColor = true;
+            this.btnHuongdan.Click += new System.EventHandler(this.btnHuongdan_Click);
             // 
             // btnTkb
             // 
@@ -102,6 +103,7 @@
             this.btnTkb.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTkb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnTkb.UseVisualStyleBackColor = true;
+            this.btnTkb.Click += new System.EventHandler(this.btnTkb_Click);
             // 
             // btnGiaovien
             // 
@@ -114,6 +116,7 @@
             this.btnGiaovien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGiaovien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnGiaovien.UseVisualStyleBackColor = true;
+            this.btnGiaovien.Click += new System.EventHandler(this.btnGiaovien_Click);
             // 
             // btnHocsinh
             // 
@@ -128,6 +131,7 @@
             this.btnHocsinh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnHocsinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnHocsinh.UseVisualStyleBackColor = true;
+            this.btnHocsinh.Click += new System.EventHandler(this.btnHocsinh_Click);
             // 
             // menuStrip1
             // 
@@ -159,6 +163,7 @@
             this.btnListstudent.Name = "btnListstudent";
             this.btnListstudent.Size = new System.Drawing.Size(172, 22);
             this.btnListstudent.Text = "Xem danh sách";
+            this.btnListstudent.Click += new System.EventHandler(this.btnListstudent_Click);
             // 
             // btnSearchstudent
             // 
@@ -181,6 +186,7 @@
             this.btnListteacher.Name = "btnListteacher";
             this.btnListteacher.Size = new System.Drawing.Size(180, 22);
             this.btnListteacher.Text = "Danh sách giáo viên";
+            this.btnListteacher.Click += new System.EventHandler(this.btnListteacher_Click);
             // 
             // btnSearchtecher
             // 
@@ -193,6 +199,7 @@
             this.btnRegisterteach.Name = "btnRegisterteach";
             this.btnRegisterteach.Size = new System.Drawing.Size(117, 20);
             this.btnRegisterteach.Text = "Đăng ký giảng dạy";
+            this.btnRegisterteach.Click += new System.EventHandler(this.btnRegisterteach_Click);
             // 
             // btnAccount
             // 
@@ -208,12 +215,14 @@
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(167, 22);
             this.btnLogout.Text = "Đăng xuát";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnAcc
             // 
             this.btnAcc.Name = "btnAcc";
             this.btnAcc.Size = new System.Drawing.Size(167, 22);
             this.btnAcc.Text = "Quản lý tài khoản";
+            this.btnAcc.Click += new System.EventHandler(this.btnAcc_Click);
             // 
             // btnF1
             // 
@@ -232,6 +241,7 @@
             this.Name = "frmMain";
             this.Text = "frmMain";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
