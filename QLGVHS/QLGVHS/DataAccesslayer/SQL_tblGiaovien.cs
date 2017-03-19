@@ -14,12 +14,12 @@ namespace QLGVHS_DATA
         //Them du lieu
         public void addGiaovien(EC_tblGiaovien et)
         {
-            cn.ThucThiCauLenhSQL(@"INSERT INTO tblGiaovien	(MaGV, TenHS, GT, SDT, NgaySinh, DiaChi, Luong, MaMon)    VALUES   ( '"+et.MaGV+"' , N'"+et.TenGV+"', N'"+et.GT+"', '"+et.SDT+"', '"+et.NgaySinh+"', N'"+et.DiaChi+"', "+et.Luong+", '"+et.MaMon+"')");
+            cn.ThucThiCauLenhSQL(@"INSERT INTO tblGiaovien	(MaGV, TenGV, GT, SDT, NgaySinh, DiaChi, Luong, MaMon)    VALUES   ( '"+et.MaGV+"' , N'"+et.TenGV+"', N'"+et.GT+"', '"+et.SDT+"', '"+et.NgaySinh+"', N'"+et.DiaChi+"', "+et.Luong+", '"+et.MaMon+"')");
         }
         //Sua du lieu
         public void updateGiaovien(EC_tblGiaovien et)
         {
-            cn.ThucThiCauLenhSQL(@"UPDATE   tblGiaovien   SET TenHS =N'"+et.TenGV+"', GT =N'"+et.GT+"', NgaySinh = '"+et.NgaySinh+"', SDT = '"+et.SDT+"', Luong = '"+et.Luong+"', DiaChi = N'"+et.DiaChi+"', MaMon = '"+et.MaMon+"' WHERE MaGV = '"+et.MaGV+"'");
+            cn.ThucThiCauLenhSQL(@"UPDATE   tblGiaovien   SET TenGV =N'"+et.TenGV+"', GT =N'"+et.GT+"', NgaySinh = '"+et.NgaySinh+"', SDT = '"+et.SDT+"', Luong = '"+et.Luong+"', DiaChi = N'"+et.DiaChi+"', MaMon = '"+et.MaMon+"' WHERE MaGV = '"+et.MaGV+"'");
         }
         //Xoa du lieu
         public void delGiaovien(EC_tblGiaovien et)
@@ -38,11 +38,11 @@ namespace QLGVHS_DATA
         //select chi tiet
         public DataTable getThongTinGV()
         {
-            return cn.getDatatable(@"SELECT MaGV, TenHS as HoTen, GT, NgaySinh, SDT, DiaChi, Luong, MaMon FROM tblGiaovien");
+            return cn.getDatatable(@"SELECT MaGV, TenGV as HoTen, GT, NgaySinh, SDT, DiaChi, Luong, MaMon FROM tblGiaovien");
         }
         public DataTable getThongTinGV(string dk)
         {
-            return cn.getDatatable(@"SELECT MaGV, TenHS as HoTen, GT, NgaySinh, SDT, DiaChi, Luong, MaMon FROM tblGiaovien where " + dk);
+            return cn.getDatatable(@"SELECT MaGV, TenGV as HoTen, GT, NgaySinh, SDT, DiaChi, Luong, MaMon FROM tblGiaovien where " + dk);
         }
         public DataTable getField(string Field)
         {

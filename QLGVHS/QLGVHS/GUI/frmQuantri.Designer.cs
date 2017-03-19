@@ -38,7 +38,7 @@
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mnsAcc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcc)).BeginInit();
@@ -64,6 +64,7 @@
             this.btnAdd.Size = new System.Drawing.Size(102, 83);
             this.btnAdd.Text = "Thêm tài khoản";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -73,6 +74,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(117, 83);
             this.btnUpdate.Text = "Thay đổi thông tin";
             this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDel
             // 
@@ -82,6 +84,7 @@
             this.btnDel.Size = new System.Drawing.Size(91, 83);
             this.btnDel.Text = "Xóa tài khoản";
             this.btnDel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // dgvAcc
             // 
@@ -96,13 +99,15 @@
             this.Password,
             this.MaGV,
             this.Ho,
-            this.Ten,
+            this.TenHS,
             this.TenQuyen});
             this.dgvAcc.Location = new System.Drawing.Point(0, 100);
             this.dgvAcc.Name = "dgvAcc";
             this.dgvAcc.ReadOnly = true;
             this.dgvAcc.Size = new System.Drawing.Size(648, 223);
             this.dgvAcc.TabIndex = 2;
+            this.dgvAcc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAcc_CellClick);
+            this.dgvAcc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAcc_CellContentClick);
             // 
             // Username
             // 
@@ -135,10 +140,10 @@
             // 
             // TenHS
             // 
-            this.Ten.DataPropertyName = "TenHS";
-            this.Ten.HeaderText = "Tên";
-            this.Ten.Name = "TenHS";
-            this.Ten.ReadOnly = true;
+            this.TenHS.DataPropertyName = "TenHS";
+            this.TenHS.HeaderText = "Tên";
+            this.TenHS.Name = "TenHS";
+            this.TenHS.ReadOnly = true;
             // 
             // TenQuyen
             // 
@@ -157,6 +162,8 @@
             this.Controls.Add(this.mnsAcc);
             this.Name = "frmQuantri";
             this.Text = "frmQuantri";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmQuantri_FormClosed);
+            this.Load += new System.EventHandler(this.frmQuantri_Load);
             this.mnsAcc.ResumeLayout(false);
             this.mnsAcc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcc)).EndInit();
@@ -178,5 +185,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ho;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ten;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenQuyen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenHS;
     }
 }
