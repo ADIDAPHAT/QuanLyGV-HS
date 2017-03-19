@@ -90,27 +90,25 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(755, 187);
+            this.groupBox1.Size = new System.Drawing.Size(833, 187);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Giáo Viên";
             // 
             // cbTenMon
             // 
-            this.cbTenMon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbTenMon.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTenMon.FormattingEnabled = true;
-            this.cbTenMon.Location = new System.Drawing.Point(622, 34);
+            this.cbTenMon.Location = new System.Drawing.Point(650, 34);
             this.cbTenMon.Name = "cbTenMon";
             this.cbTenMon.Size = new System.Drawing.Size(130, 23);
             this.cbTenMon.TabIndex = 24;
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(566, 37);
+            this.label9.Location = new System.Drawing.Point(594, 37);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 15);
             this.label9.TabIndex = 23;
@@ -118,19 +116,17 @@
             // 
             // txtSDT
             // 
-            this.txtSDT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSDT.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.Location = new System.Drawing.Point(404, 119);
+            this.txtSDT.Location = new System.Drawing.Point(408, 122);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(141, 22);
             this.txtSDT.TabIndex = 22;
             // 
             // label10
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(352, 122);
+            this.label10.Location = new System.Drawing.Point(343, 122);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(32, 15);
             this.label10.TabIndex = 21;
@@ -138,39 +134,34 @@
             // 
             // cbGT
             // 
-            this.cbGT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbGT.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGT.FormattingEnabled = true;
-            this.cbGT.Location = new System.Drawing.Point(404, 74);
+            this.cbGT.Location = new System.Drawing.Point(408, 77);
             this.cbGT.Name = "cbGT";
             this.cbGT.Size = new System.Drawing.Size(141, 23);
             this.cbGT.TabIndex = 18;
             // 
             // dtpNS
             // 
-            this.dtpNS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpNS.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNS.Location = new System.Drawing.Point(77, 119);
             this.dtpNS.Name = "dtpNS";
             this.dtpNS.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtpNS.Size = new System.Drawing.Size(253, 22);
+            this.dtpNS.Size = new System.Drawing.Size(237, 22);
             this.dtpNS.TabIndex = 17;
             // 
             // txtMaMon
             // 
-            this.txtMaMon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMaMon.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaMon.Location = new System.Drawing.Point(404, 34);
+            this.txtMaMon.Location = new System.Drawing.Point(408, 37);
             this.txtMaMon.Name = "txtMaMon";
             this.txtMaMon.Size = new System.Drawing.Size(141, 22);
             this.txtMaMon.TabIndex = 16;
             // 
             // txtLuong
             // 
-            this.txtLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLuong.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLuong.Location = new System.Drawing.Point(404, 152);
+            this.txtLuong.Location = new System.Drawing.Point(408, 155);
             this.txtLuong.Name = "txtLuong";
             this.txtLuong.Size = new System.Drawing.Size(141, 22);
             this.txtLuong.TabIndex = 15;
@@ -189,21 +180,18 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(78, 156);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDiaChi.Size = new System.Drawing.Size(252, 22);
+            this.txtDiaChi.Size = new System.Drawing.Size(236, 22);
             this.txtDiaChi.TabIndex = 14;
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(352, 37);
+            this.label5.Location = new System.Drawing.Point(343, 37);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 15);
             this.label5.TabIndex = 12;
@@ -211,10 +199,9 @@
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(352, 159);
+            this.label6.Location = new System.Drawing.Point(343, 159);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 15);
             this.label6.TabIndex = 11;
@@ -222,10 +209,9 @@
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(352, 81);
+            this.label8.Location = new System.Drawing.Point(343, 81);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 15);
             this.label8.TabIndex = 9;
@@ -233,23 +219,19 @@
             // 
             // txtTen
             // 
-            this.txtTen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTen.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTen.Location = new System.Drawing.Point(77, 71);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(253, 22);
+            this.txtTen.Size = new System.Drawing.Size(237, 22);
             this.txtTen.TabIndex = 7;
             // 
             // txtMaGV
             // 
-            this.txtMaGV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMaGV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaGV.Location = new System.Drawing.Point(78, 34);
             this.txtMaGV.Name = "txtMaGV";
             this.txtMaGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtMaGV.Size = new System.Drawing.Size(252, 22);
+            this.txtMaGV.Size = new System.Drawing.Size(236, 22);
             this.txtMaGV.TabIndex = 4;
             // 
             // label4
@@ -301,7 +283,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(9, 193);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(466, 71);
+            this.menuStrip1.Size = new System.Drawing.Size(470, 71);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -315,6 +297,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -326,6 +309,7 @@
             this.btnSua.Text = "Thay đổi thông tin";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnLuu
             // 
@@ -337,6 +321,7 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -348,6 +333,7 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLamMoiDuLieu
             // 
@@ -359,6 +345,7 @@
             this.btnLamMoiDuLieu.Text = "Làm mới dữ liệu";
             this.btnLamMoiDuLieu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLamMoiDuLieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnLamMoiDuLieu.Click += new System.EventHandler(this.btnLamMoiDuLieu_Click);
             // 
             // btnThoat
             // 
@@ -419,20 +406,22 @@
             this.dgvGiaoVien.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvGiaoVien.Location = new System.Drawing.Point(3, 320);
             this.dgvGiaoVien.Name = "dgvGiaoVien";
-            this.dgvGiaoVien.Size = new System.Drawing.Size(753, 221);
+            this.dgvGiaoVien.Size = new System.Drawing.Size(831, 221);
             this.dgvGiaoVien.TabIndex = 4;
+            this.dgvGiaoVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaoVien_CellClick);
             // 
             // frmGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 550);
+            this.ClientSize = new System.Drawing.Size(841, 550);
             this.Controls.Add(this.dgvGiaoVien);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmGiaoVien";
             this.Text = "frmGiaoVien";
+            this.Load += new System.EventHandler(this.frmGiaoVien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
