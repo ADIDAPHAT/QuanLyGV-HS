@@ -11,6 +11,7 @@ namespace QLGVHS_BUS
 {
     public class BUS_tblGiaovien
     {
+
         SQL_tblGiaovien bus = new SQL_tblGiaovien();
         public void addGiaovien(EC_tblGiaovien et)
         {
