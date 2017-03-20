@@ -129,11 +129,62 @@ namespace QLGVHS.GUI
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+           
+            btnThem.Enabled = false;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            btnLuu.Enabled = true;
+            MoDieuKhien();
+            txtMaHS.ReadOnly = true;
+            themmoi = false;
+
 
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            if (txtMaHS.Text == "" || txtTen.Text == "")
+            {
+                MessageBox.Show("Xin mời nhập thông tin đầy đủ");
+                KhoaDieuKhien();
+                return;
+            }
+            else
+            {
+                if (themmoi == true)/*đang ở trang thái thêm mới*/
+                {
+                    
+
+                }
+                else
+                {
+                    try
+                    {
+                        ectHS.MaHS = txtMaHS.Text;
+                        ectHS.TenHS = txtTen.Text;
+                        if (rdbNam.Checked) ectHS.GT = "Nam";
+                        else ectHS.GT = "Nu";
+                        ectHS.NgaySinh = dtpNgaySinh.Value.Year.ToString() + "-" + dtpNgaySinh.Value.Month.ToString() + "-" + dtpNgaySinh.Value.Day.ToString();
+                        ectHS.MaLop = cboMaLop.Text;
+                        ectHS.DiaChi = txtDiaChi.Text;
+                        ectHS.DanToc = cboDanToc.Text;
+                        ectHS.TonGiao = cboTonGiao.Text;
+
+                        busHS.updateHocsinh(ectHS);
+                        MessageBox.Show("Đã sửa thành công");
+                      
+                        SetNull();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Lỗi");
+                        return;
+                    }
+                }
+                SetNull();
+                KhoaDieuKhien();/*không cho thao tác*/
+                HienThi();
+            }
 
         }
 
