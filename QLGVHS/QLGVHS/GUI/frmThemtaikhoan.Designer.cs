@@ -87,6 +87,7 @@
             this.cmbQuyen.Name = "cmbQuyen";
             this.cmbQuyen.Size = new System.Drawing.Size(236, 21);
             this.cmbQuyen.TabIndex = 14;
+            this.cmbQuyen.SelectedIndexChanged += new System.EventHandler(this.cmbQuyen_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -104,6 +105,9 @@
             this.cmbMaGV.Name = "cmbMaGV";
             this.cmbMaGV.Size = new System.Drawing.Size(236, 21);
             this.cmbMaGV.TabIndex = 13;
+            this.cmbMaGV.SelectedIndexChanged += new System.EventHandler(this.cmbMaGV_SelectedIndexChanged);
+            this.cmbMaGV.TextChanged += new System.EventHandler(this.cmbMaGV_TextChanged);
+            this.cmbMaGV.Click += new System.EventHandler(this.cmbMaGV_Click);
             // 
             // txtUsername
             // 
@@ -111,6 +115,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(236, 20);
             this.txtUsername.TabIndex = 3;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // label2
             // 
@@ -127,6 +132,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(236, 20);
             this.txtPassword.TabIndex = 5;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // label4
             // 
@@ -161,6 +167,7 @@
             this.btnAdd.TabIndex = 18;
             this.btnAdd.Text = "OK";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnCancel
             // 
@@ -170,6 +177,7 @@
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnReset
             // 
@@ -179,6 +187,7 @@
             this.btnReset.TabIndex = 16;
             this.btnReset.Text = "Nhập lại";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // frmThemtaikhoan
             // 
@@ -191,6 +200,7 @@
             this.Controls.Add(this.btnReset);
             this.Name = "frmThemtaikhoan";
             this.Text = "frmThemtaikhoan";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmThemtaikhoan_FormClosing);
             this.grbAcc.ResumeLayout(false);
             this.grbAcc.PerformLayout();
             this.ResumeLayout(false);
