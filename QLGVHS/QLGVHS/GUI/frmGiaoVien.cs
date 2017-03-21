@@ -110,6 +110,7 @@ namespace QLGVHS.GUI
             {
                 teacher.MaGV = txtMaGV.Text;
                 gv.delGiaovien(teacher);
+                MessageBox.Show("Xóa dữ liệu thành công", "Thông Báo", MessageBoxButtons.OK);
                 SetNull();
                 dgvGiaoVien.DataSource = gv.getAllgiaovien();
             }
