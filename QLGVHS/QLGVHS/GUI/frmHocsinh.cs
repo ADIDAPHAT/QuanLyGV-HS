@@ -139,8 +139,22 @@ namespace QLGVHS.GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            DialogResult xacnhan;
+            xacnhan = MessageBox.Show("Bạn có chắc chắn muốn xóa không??", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (xacnhan == DialogResult.OK)
+            {
+                ectHS.MaHS = txtMaHS.Text;
+                busHS.delHocsinh(ectHS);
+                MessageBox.Show("Đã xóa thành công!");
+                
+                SetNull();
+                dgvHocSinh.DataSource = busHS.getAllHocsinh();
 
+
+            }
         }
+
+        
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
