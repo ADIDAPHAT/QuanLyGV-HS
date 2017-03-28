@@ -157,9 +157,9 @@ namespace QLGVHS.GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+				DialogResult traloi;
+            traloi = MessageBox.Show("Bạn có muốn xóa dữ liệu?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-            DialogResult traloi;
-            traloi = MessageBox.Show("Bạn có muốn xóa dữ liệu???", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (traloi == DialogResult.OK)
             {
                 teacher.MaGV = txtMaGV.Text;
@@ -167,6 +167,7 @@ namespace QLGVHS.GUI
                 SetNull();
                 dgvGiaoVien.DataSource = gv.getAllgiaovien();
             }
+
 
         }
     }
