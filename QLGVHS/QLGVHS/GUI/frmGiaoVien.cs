@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using QLGVHS_BUS;
 using QLGVHS_DATA;
 using QLGCHS_ValueObject;
-
+using QLGVHS_DATA;
 namespace QLGVHS.GUI
 {
     public partial class frmGiaoVien : Form
@@ -157,6 +157,16 @@ namespace QLGVHS.GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+
+            DialogResult traloi;
+            traloi = MessageBox.Show("Bạn có muốn xóa dữ liệu?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloi == DialogResult.OK)
+            {
+                teacher.MaGV = txtMaGV.Text;
+                gv.delGiaovien(teacher);
+                SetNull();
+                dgvGiaoVien.DataSource = gv.getAllgiaovien();
+            }
 
         }
     }
