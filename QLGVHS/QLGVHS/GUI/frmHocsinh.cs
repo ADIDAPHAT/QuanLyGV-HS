@@ -190,8 +190,7 @@ namespace QLGVHS.GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
-            DialogResult xacnhan;
+                  DialogResult xacnhan;
             xacnhan = MessageBox.Show("Bạn có muốn xóa không??", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (xacnhan == DialogResult.OK)
             {
