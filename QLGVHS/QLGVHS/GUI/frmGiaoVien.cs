@@ -20,6 +20,7 @@ namespace QLGVHS.GUI
         SQL_tblMonhoc MH = new SQL_tblMonhoc();
         EC_tblGiaovien teacher = new EC_tblGiaovien();
         DataTable dt = new DataTable();
+        private bool themmoi;
 
         public void SetNull()
         {
@@ -93,12 +94,65 @@ namespace QLGVHS.GUI
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            if (dong < 0)
+            {
+                MessageBox.Show("Chưa chọn giáo viên để sửa!");
+                return;
+            }
+            MoDieuKhien();
+            cbGT.DataSource = gv.getField("GT");
+            cbGT.DisplayMember = "GT";
+            btnThem.Enabled = false;
+            btnXoa.Enabled = false;
+            btnLuu.Enabled = true;
+            btnLamMoiDuLieu.Enabled = true;
+
 
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            if (txtMaGV.Text == "" || txtTen.Text == "")
+            {
+                MessageBox.Show("Xin mời nhập thông tin đầy đủ");
+                KhoaDieuKhien();
+                return;
+            }
+            else
+            {
+                if (themmoi == true)/*đang ở trang thái thêm mới*/
+                {
 
+
+                }
+                else
+                {
+                    try
+                    {
+                        teacher.MaGV = txtMaGV.Text;
+                        teacher.TenGV = txtTen.Text;
+                        teacher.GT = cbGT.Text;
+                        teacher.NgaySinh = dtpNS.Value.Year.ToString() + "-" + dtpNS.Value.Month.ToString() + "-" + dtpNS.Value.Day.ToString();
+                        teacher.DiaChi = txtDiaChi.Text;
+                        teacher.Luong = txtLuong.Text;
+                        teacher.MaMon = txtMaMon.Text;
+                        teacher.SDT = txtSDT.Text;
+                        gv.updateGiaovien(teacher);
+                        MessageBox.Show("Cập Nhật Thành Công", "Thông Báo", MessageBoxButtons.OK);
+                        MessageBox.Show("Đã sửa thành công");
+
+                        SetNull();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Lỗi");
+                        return;
+                    }
+                }
+                SetNull();
+                KhoaDieuKhien();/*không cho thao tác*/
+                dgvGiaoVien.DataSource = gv.getAllgiaovien();
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
