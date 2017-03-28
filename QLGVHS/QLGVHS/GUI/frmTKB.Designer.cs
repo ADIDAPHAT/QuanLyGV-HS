@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.grbTKB = new System.Windows.Forms.GroupBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.lblClass = new System.Windows.Forms.Label();
-            this.cmbClass = new System.Windows.Forms.ComboBox();
             this.dgvTKB = new System.Windows.Forms.DataGridView();
             this.Tiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Thu2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +49,9 @@
             this.Thu7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenGV7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaGV7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.lblClass = new System.Windows.Forms.Label();
+            this.cmbClass = new System.Windows.Forms.ComboBox();
             this.grbTKB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTKB)).BeginInit();
             this.SuspendLayout();
@@ -69,32 +69,6 @@
             this.grbTKB.TabIndex = 1;
             this.grbTKB.TabStop = false;
             this.grbTKB.Text = "Thông tin giảng dạy";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(326, 21);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // lblClass
-            // 
-            this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(52, 26);
-            this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(25, 13);
-            this.lblClass.TabIndex = 1;
-            this.lblClass.Text = "Lớp";
-            // 
-            // cmbClass
-            // 
-            this.cmbClass.FormattingEnabled = true;
-            this.cmbClass.Location = new System.Drawing.Point(102, 23);
-            this.cmbClass.Name = "cmbClass";
-            this.cmbClass.Size = new System.Drawing.Size(159, 21);
-            this.cmbClass.TabIndex = 0;
             // 
             // dgvTKB
             // 
@@ -240,6 +214,34 @@
             this.MaGV7.Name = "MaGV7";
             this.MaGV7.Visible = false;
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(326, 21);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // lblClass
+            // 
+            this.lblClass.AutoSize = true;
+            this.lblClass.Location = new System.Drawing.Point(52, 26);
+            this.lblClass.Name = "lblClass";
+            this.lblClass.Size = new System.Drawing.Size(25, 13);
+            this.lblClass.TabIndex = 1;
+            this.lblClass.Text = "Lớp";
+            // 
+            // cmbClass
+            // 
+            this.cmbClass.FormattingEnabled = true;
+            this.cmbClass.Location = new System.Drawing.Point(102, 23);
+            this.cmbClass.Name = "cmbClass";
+            this.cmbClass.Size = new System.Drawing.Size(159, 21);
+            this.cmbClass.TabIndex = 0;
+            this.cmbClass.SelectedIndexChanged += new System.EventHandler(this.cmbClass_SelectedIndexChanged);
+            // 
             // frmTKB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,6 +250,7 @@
             this.Controls.Add(this.grbTKB);
             this.Name = "frmTKB";
             this.Text = "frmTKB";
+            this.Load += new System.EventHandler(this.frmTKB_Load);
             this.grbTKB.ResumeLayout(false);
             this.grbTKB.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTKB)).EndInit();
