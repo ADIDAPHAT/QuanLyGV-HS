@@ -125,6 +125,15 @@ namespace QLGVHS.GUI
         private void btnThem_Click(object sender, EventArgs e)
         {
 
+            txtMaHS.Enabled = true;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            btnLuu.Enabled = true;
+            txtMaHS.Focus();
+            MoDieuKhien();
+            SetNull();
+            DoDLMaLop();
+            themmoi = true;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -153,7 +162,29 @@ namespace QLGVHS.GUI
             {
                 if (themmoi == true)/*đang ở trang thái thêm mới*/
                 {
-                    
+                    try
+                    {
+                        ectHS.MaHS = txtMaHS.Text;
+                        ectHS.TenHS = txtTen.Text;
+                        if (rdbNam.Checked) ectHS.GT = "Nam";
+                        else ectHS.GT = "Nu";
+                        ectHS.NgaySinh = dtpNgaySinh.Value.Year.ToString() + "-" + dtpNgaySinh.Value.Month.ToString() + "-" + dtpNgaySinh.Value.Day.ToString();
+                        ectHS.MaLop = cboMaLop.Text;
+                        ectHS.DiaChi = txtDiaChi.Text;
+                        ectHS.DanToc = cboDanToc.Text;
+                        ectHS.TonGiao = cboTonGiao.Text;
+
+                        busHS.addHocsinh(ectHS);
+                        MessageBox.Show("Đã thêm mới thành công");/*dòng thông báo*/
+                        //toolStripMenuItem1_Click(sender, e);
+                        txtMaHS.Enabled = false;
+                        SetNull();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Lỗi");
+                        return;
+                    }
 
                 }
                 else
@@ -209,7 +240,16 @@ namespace QLGVHS.GUI
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Bạn có muốn Thoát hay không", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                btnThem.Enabled = true;
+                btnLuu.Enabled = false;
+                btnXoa.Enabled = true;
+                btnSua.Enabled = true;
+                SetNull();
+                KhoaDieuKhien();/*không cho thao tác*/
+                dgvHocSinh.DataSource = busHS.getAllHocsinh();
+            }
         }
 
         private void txtTimMaHS_TextChanged(object sender, EventArgs e)
@@ -291,6 +331,7 @@ namespace QLGVHS.GUI
 
         private void txtTimMaHS_Click(object sender, EventArgs e)
         {
+            txtTimMaHS.Text = "";
             if (_dangTimMa)
             {
                 txtTimMaHS.SelectionStart = txtTimMaHS.Text.Length;
@@ -303,6 +344,7 @@ namespace QLGVHS.GUI
 
         private void txtTimTenHS_Click(object sender, EventArgs e)
         {
+            txtTimTenHS.Text = "";
             if (_dangTimTen)
             {
                 txtTimTenHS.SelectionStart = txtTimTenHS.Text.Length;

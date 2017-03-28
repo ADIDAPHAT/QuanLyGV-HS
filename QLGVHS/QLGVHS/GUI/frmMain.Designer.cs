@@ -170,6 +170,7 @@
             this.btnSearchstudent.Name = "btnSearchstudent";
             this.btnSearchstudent.Size = new System.Drawing.Size(172, 22);
             this.btnSearchstudent.Text = "Tìm kiếm học sinh";
+            this.btnSearchstudent.Click += new System.EventHandler(this.btnSearchstudent_Click);
             // 
             // btnTeacher
             // 
@@ -193,6 +194,7 @@
             this.btnSearchtecher.Name = "btnSearchtecher";
             this.btnSearchtecher.Size = new System.Drawing.Size(180, 22);
             this.btnSearchtecher.Text = "Tìm kiếm giáo viên";
+            this.btnSearchtecher.Click += new System.EventHandler(this.btnSearchtecher_Click);
             // 
             // btnRegisterteach
             // 
