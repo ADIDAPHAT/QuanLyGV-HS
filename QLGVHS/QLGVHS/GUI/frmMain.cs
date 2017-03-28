@@ -92,6 +92,7 @@ namespace QLGVHS.GUI
         private void btnHuongdan_Click(object sender, EventArgs e)
         {
             Process.Start(@"http://qlgvhs.herobo.com/");
+            
         }
 
         private void btnTkb_Click(object sender, EventArgs e)
@@ -133,6 +134,18 @@ namespace QLGVHS.GUI
         }
 
         private void btnListteacher_Click(object sender, EventArgs e)
+        {
+            frmGiaoVien gv = new frmGiaoVien();
+            gv.ShowDialog();
+        }
+
+        private void btnSearchstudent_Click(object sender, EventArgs e)
+        {
+            frmHocsinh hs = new frmHocsinh();
+            hs.ShowDialog();
+        }
+
+        private void btnSearchtecher_Click(object sender, EventArgs e)
         {
             frmGiaoVien gv = new frmGiaoVien();
             gv.ShowDialog();

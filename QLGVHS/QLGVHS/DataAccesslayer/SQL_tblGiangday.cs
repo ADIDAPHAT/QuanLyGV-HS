@@ -38,11 +38,11 @@ namespace QLGVHS_DATA
         //select chi tiet
         public DataTable getThongTinGD()
         {
-            return cn.getDatatable(@"SELECT (Ho + ' ' + TenHS) as HoTen , Thu, Tietday, TenLop FROM tblGiangday, tblGiaovien, tblLop where tblGiangday.MaGV = tblGiaoVien.MaGV and tblGiangday.MaLop = tblLop.MaLop order by HoTen, TenLop");
+            return cn.getDatatable(@"SELECT TenGV as HoTen , Thu, Tietday, TenLop FROM tblGiangday, tblGiaovien, tblLop where tblGiangday.MaGV = tblGiaoVien.MaGV and tblGiangday.MaLop = tblLop.MaLop order by HoTen, TenLop");
         }
         public DataTable getThongTinGD(string dk)
         {
-            return cn.getDatatable(@"SELECT (Ho + ' ' + TenHS) as HoTen , Thu, Tietday, TenLop FROM tblGiangday, tblGiaovien, tblLop where tblGiangday.MaGV = tblGiaoVien.MaGV and tblGiangday.MaLop = tblLop.MaLop " + dk + " order by HoTen, TenLop");
+            return cn.getDatatable(@"SELECT TenGV as HoTen , Thu, Tietday, TenLop FROM tblGiangday, tblGiaovien, tblLop where tblGiangday.MaGV = tblGiaoVien.MaGV and tblGiangday.MaLop = tblLop.MaLop " + dk + " order by HoTen, TenLop");
         }
     }
 }
