@@ -50,6 +50,13 @@ namespace QLGVHS.GUI
             txtLuong.ReadOnly = true;
             txtMaMon.ReadOnly = true;
         }
+        private bool _dangTimMaGV = false;
+        private bool _dangTimHo = false;
+        private bool _dangTimTen = false;
+        private bool _dangTimMaMon = false;
+        private bool _dangTimDiaChi = false;
+
+        private BUS_tblGiaovien busGV = new BUS_tblGiaovien();
         public frmGiaoVien()
         {
             InitializeComponent();
@@ -169,6 +176,34 @@ namespace QLGVHS.GUI
             }
 
 
+        }
+
+        private void txtTimMaGV_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTimMaGV.Text != "") _dangTimMaGV = true;
+            else _dangTimMaGV = false;
+            string dieukien = "where MaGV like N'%" + txtTimMaGV.Text + "%'";
+
+            if (_dangTimTen) dieukien += "AND TenGV like N'%" + txtTen.Text + "%'";
+            
+           
+
+            DataTable tbl = busGV.getgiaovien(dieukien);
+            dgvGiaoVien.DataSource = tbl;
+        }
+
+        private void txtTimTenGv_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTimTenGv.Text != "") _dangTimTen = true;
+            else _dangTimTen = false;
+            string dieukien = "where TenGV like N'%" + txtTimTenGv.Text + "%'";
+
+            if (_dangTimMaGV) dieukien += "AND MaGV like N'%" + txtTen.Text + "%'";
+
+
+
+            DataTable tbl = busGV.getgiaovien(dieukien);
+            dgvGiaoVien.DataSource = tbl;
         }
     }
 }

@@ -57,8 +57,8 @@
             this.btnThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.txtTimMaHS = new System.Windows.Forms.ToolStripTextBox();
-            this.txtTimHoHS = new System.Windows.Forms.ToolStripTextBox();
+            this.txtTimMaGV = new System.Windows.Forms.ToolStripTextBox();
+            this.txtTimTenGv = new System.Windows.Forms.ToolStripTextBox();
             this.dgvGiaoVien = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -365,8 +365,8 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.txtTimMaHS,
-            this.txtTimHoHS});
+            this.txtTimMaGV,
+            this.txtTimTenGv});
             this.toolStrip1.Location = new System.Drawing.Point(3, 275);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(324, 42);
@@ -384,17 +384,19 @@
             this.toolStripLabel1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolStripLabel1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // txtTimMaHS
+            // txtTimMaGV
             // 
-            this.txtTimMaHS.Name = "txtTimMaHS";
-            this.txtTimMaHS.Size = new System.Drawing.Size(75, 42);
-            this.txtTimMaHS.Text = "-- Mã GV";
+            this.txtTimMaGV.Name = "txtTimMaGV";
+            this.txtTimMaGV.Size = new System.Drawing.Size(75, 42);
+            this.txtTimMaGV.Text = "-- Mã GV";
+            this.txtTimMaGV.TextChanged += new System.EventHandler(this.txtTimMaGV_TextChanged);
             // 
-            // txtTimHoHS
+            // txtTimTenGv
             // 
-            this.txtTimHoHS.Name = "txtTimHoHS";
-            this.txtTimHoHS.Size = new System.Drawing.Size(176, 42);
-            this.txtTimHoHS.Text = "-- Họ Tên GV";
+            this.txtTimTenGv.Name = "txtTimTenGv";
+            this.txtTimTenGv.Size = new System.Drawing.Size(176, 23);
+            this.txtTimTenGv.Text = "-- Họ Tên GV";
+            this.txtTimTenGv.TextChanged += new System.EventHandler(this.txtTimTenGv_TextChanged);
             // 
             // dgvGiaoVien
             // 
@@ -464,8 +466,8 @@
         private System.Windows.Forms.ToolStripMenuItem btnThoat;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripTextBox txtTimMaHS;
-        private System.Windows.Forms.ToolStripTextBox txtTimHoHS;
+        private System.Windows.Forms.ToolStripTextBox txtTimMaGV;
+        private System.Windows.Forms.ToolStripTextBox txtTimTenGv;
         private System.Windows.Forms.DataGridView dgvGiaoVien;
     }
 }
