@@ -105,7 +105,7 @@ namespace QLGVHS.GUI
         {
 
             DialogResult traloi;
-            traloi = MessageBox.Show("Bạn có muốn xóa dữ liệu???", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            traloi = MessageBox.Show("Bạn có muốn xóa dữ liệu?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (traloi == DialogResult.OK)
             {
                 teacher.MaGV = txtMaGV.Text;
