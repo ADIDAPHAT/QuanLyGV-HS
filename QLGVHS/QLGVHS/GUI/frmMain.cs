@@ -138,5 +138,17 @@ namespace QLGVHS.GUI
             frmGiaoVien gv = new frmGiaoVien();
             gv.ShowDialog();
         }
+
+        private void btnSearchstudent_Click(object sender, EventArgs e)
+        {
+            frmHocsinh hs = new frmHocsinh();
+            hs.ShowDialog();
+        }
+
+        private void btnSearchtecher_Click(object sender, EventArgs e)
+        {
+            frmGiaoVien gv = new frmGiaoVien();
+            gv.ShowDialog();
+        }
     }
 }

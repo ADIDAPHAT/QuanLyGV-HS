@@ -36,11 +36,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.cbGT = new System.Windows.Forms.ComboBox();
             this.dtpNS = new System.Windows.Forms.DateTimePicker();
-            this.txtMaMon = new System.Windows.Forms.TextBox();
             this.txtLuong = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTen = new System.Windows.Forms.TextBox();
@@ -53,12 +51,11 @@
             this.btnSua = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLuu = new System.Windows.Forms.ToolStripMenuItem();
             this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnLamMoiDuLieu = new System.Windows.Forms.ToolStripMenuItem();
             this.btnThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.txtTimMaHS = new System.Windows.Forms.ToolStripTextBox();
-            this.txtTimHoHS = new System.Windows.Forms.ToolStripTextBox();
+            this.txtTimMaGV = new System.Windows.Forms.ToolStripTextBox();
+            this.txtTimTenGv = new System.Windows.Forms.ToolStripTextBox();
             this.dgvGiaoVien = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -76,11 +73,9 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.cbGT);
             this.groupBox1.Controls.Add(this.dtpNS);
-            this.groupBox1.Controls.Add(this.txtMaMon);
             this.groupBox1.Controls.Add(this.txtLuong);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtDiaChi);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtTen);
@@ -99,16 +94,16 @@
             // 
             this.cbTenMon.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTenMon.FormattingEnabled = true;
-            this.cbTenMon.Location = new System.Drawing.Point(650, 34);
+            this.cbTenMon.Location = new System.Drawing.Point(408, 34);
             this.cbTenMon.Name = "cbTenMon";
-            this.cbTenMon.Size = new System.Drawing.Size(130, 23);
+            this.cbTenMon.Size = new System.Drawing.Size(141, 23);
             this.cbTenMon.TabIndex = 24;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(594, 37);
+            this.label9.Location = new System.Drawing.Point(343, 37);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 15);
             this.label9.TabIndex = 23;
@@ -136,6 +131,9 @@
             // 
             this.cbGT.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGT.FormattingEnabled = true;
+            this.cbGT.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.cbGT.Location = new System.Drawing.Point(408, 77);
             this.cbGT.Name = "cbGT";
             this.cbGT.Size = new System.Drawing.Size(141, 23);
@@ -149,14 +147,6 @@
             this.dtpNS.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpNS.Size = new System.Drawing.Size(237, 22);
             this.dtpNS.TabIndex = 17;
-            // 
-            // txtMaMon
-            // 
-            this.txtMaMon.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaMon.Location = new System.Drawing.Point(408, 37);
-            this.txtMaMon.Name = "txtMaMon";
-            this.txtMaMon.Size = new System.Drawing.Size(141, 22);
-            this.txtMaMon.TabIndex = 16;
             // 
             // txtLuong
             // 
@@ -186,16 +176,6 @@
             this.txtDiaChi.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtDiaChi.Size = new System.Drawing.Size(236, 22);
             this.txtDiaChi.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(343, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 15);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Mã Môn";
             // 
             // label6
             // 
@@ -227,6 +207,7 @@
             // 
             // txtMaGV
             // 
+            this.txtMaGV.Enabled = false;
             this.txtMaGV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaGV.Location = new System.Drawing.Point(78, 34);
             this.txtMaGV.Name = "txtMaGV";
@@ -278,12 +259,11 @@
             this.btnSua,
             this.btnLuu,
             this.btnXoa,
-            this.btnLamMoiDuLieu,
             this.btnThoat});
             this.menuStrip1.Location = new System.Drawing.Point(9, 193);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(470, 71);
+            this.menuStrip1.Size = new System.Drawing.Size(457, 71);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -335,18 +315,6 @@
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // btnLamMoiDuLieu
-            // 
-            this.btnLamMoiDuLieu.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoiDuLieu.Image")));
-            this.btnLamMoiDuLieu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLamMoiDuLieu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnLamMoiDuLieu.Name = "btnLamMoiDuLieu";
-            this.btnLamMoiDuLieu.Size = new System.Drawing.Size(105, 67);
-            this.btnLamMoiDuLieu.Text = "Làm mới dữ liệu";
-            this.btnLamMoiDuLieu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnLamMoiDuLieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnLamMoiDuLieu.Click += new System.EventHandler(this.btnLamMoiDuLieu_Click);
-            // 
             // btnThoat
             // 
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
@@ -357,6 +325,7 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // toolStrip1
             // 
@@ -365,8 +334,8 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.txtTimMaHS,
-            this.txtTimHoHS});
+            this.txtTimMaGV,
+            this.txtTimTenGv});
             this.toolStrip1.Location = new System.Drawing.Point(3, 275);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(324, 42);
@@ -384,17 +353,21 @@
             this.toolStripLabel1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolStripLabel1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // txtTimMaHS
+            // txtTimMaGV
             // 
-            this.txtTimMaHS.Name = "txtTimMaHS";
-            this.txtTimMaHS.Size = new System.Drawing.Size(75, 42);
-            this.txtTimMaHS.Text = "-- Mã GV";
+            this.txtTimMaGV.Name = "txtTimMaGV";
+            this.txtTimMaGV.Size = new System.Drawing.Size(75, 42);
+            this.txtTimMaGV.Text = "-- Mã GV";
+            this.txtTimMaGV.Click += new System.EventHandler(this.txtTimMaGV_Click);
+            this.txtTimMaGV.TextChanged += new System.EventHandler(this.txtTimMaGV_TextChanged);
             // 
-            // txtTimHoHS
+            // txtTimTenGv
             // 
-            this.txtTimHoHS.Name = "txtTimHoHS";
-            this.txtTimHoHS.Size = new System.Drawing.Size(176, 42);
-            this.txtTimHoHS.Text = "-- Họ Tên GV";
+            this.txtTimTenGv.Name = "txtTimTenGv";
+            this.txtTimTenGv.Size = new System.Drawing.Size(176, 42);
+            this.txtTimTenGv.Text = "-- Họ Tên GV";
+            this.txtTimTenGv.Click += new System.EventHandler(this.txtTimTenGv_Click);
+            this.txtTimTenGv.TextChanged += new System.EventHandler(this.txtTimTenGv_TextChanged);
             // 
             // dgvGiaoVien
             // 
@@ -443,11 +416,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbGT;
         private System.Windows.Forms.DateTimePicker dtpNS;
-        private System.Windows.Forms.TextBox txtMaMon;
         private System.Windows.Forms.TextBox txtLuong;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTen;
@@ -460,12 +431,11 @@
         private System.Windows.Forms.ToolStripMenuItem btnSua;
         private System.Windows.Forms.ToolStripMenuItem btnLuu;
         private System.Windows.Forms.ToolStripMenuItem btnXoa;
-        private System.Windows.Forms.ToolStripMenuItem btnLamMoiDuLieu;
         private System.Windows.Forms.ToolStripMenuItem btnThoat;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripTextBox txtTimMaHS;
-        private System.Windows.Forms.ToolStripTextBox txtTimHoHS;
+        private System.Windows.Forms.ToolStripTextBox txtTimMaGV;
+        private System.Windows.Forms.ToolStripTextBox txtTimTenGv;
         private System.Windows.Forms.DataGridView dgvGiaoVien;
     }
 }
