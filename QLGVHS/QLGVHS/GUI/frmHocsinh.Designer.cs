@@ -248,6 +248,7 @@
             // 
             // txtMaHS
             // 
+            this.txtMaHS.Enabled = false;
             this.txtMaHS.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaHS.Location = new System.Drawing.Point(81, 20);
             this.txtMaHS.Name = "txtMaHS";
@@ -443,6 +444,8 @@
             this.txtTimMaHS.Name = "txtTimMaHS";
             this.txtTimMaHS.Size = new System.Drawing.Size(75, 42);
             this.txtTimMaHS.Text = "-- Mã HS";
+            this.txtTimMaHS.Enter += new System.EventHandler(this.txtTimMaHS_Enter);
+            this.txtTimMaHS.Click += new System.EventHandler(this.txtTimMaHS_Click);
             this.txtTimMaHS.TextChanged += new System.EventHandler(this.txtTimMaHS_TextChanged);
             // 
             // txtTimTenHS
@@ -450,6 +453,8 @@
             this.txtTimTenHS.Name = "txtTimTenHS";
             this.txtTimTenHS.Size = new System.Drawing.Size(100, 42);
             this.txtTimTenHS.Text = "-- Tên HS";
+            this.txtTimTenHS.Enter += new System.EventHandler(this.txtTimTenHS_Enter);
+            this.txtTimTenHS.Click += new System.EventHandler(this.txtTimTenHS_Click);
             this.txtTimTenHS.TextChanged += new System.EventHandler(this.txtTimTenHS_TextChanged);
             // 
             // cboTimMaLop
@@ -457,6 +462,8 @@
             this.cboTimMaLop.Name = "cboTimMaLop";
             this.cboTimMaLop.Size = new System.Drawing.Size(80, 42);
             this.cboTimMaLop.Text = "-- Mã lớp";
+            this.cboTimMaLop.Enter += new System.EventHandler(this.cboTimMaLop_Enter);
+            this.cboTimMaLop.Click += new System.EventHandler(this.cboTimMaLop_Click);
             this.cboTimMaLop.TextChanged += new System.EventHandler(this.cboTimMaLop_TextChanged);
             // 
             // cboTimDanToc
@@ -464,6 +471,8 @@
             this.cboTimDanToc.Name = "cboTimDanToc";
             this.cboTimDanToc.Size = new System.Drawing.Size(100, 42);
             this.cboTimDanToc.Text = "-- Dân tộc";
+            this.cboTimDanToc.Enter += new System.EventHandler(this.cboTimDanToc_Enter);
+            this.cboTimDanToc.Click += new System.EventHandler(this.cboTimDanToc_Click);
             this.cboTimDanToc.TextChanged += new System.EventHandler(this.cboTimDanToc_TextChanged);
             // 
             // dgvHocSinh

@@ -125,6 +125,15 @@ namespace QLGVHS.GUI
         private void btnThem_Click(object sender, EventArgs e)
         {
 
+            txtMaHS.Enabled = true;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            btnLuu.Enabled = true;
+            txtMaHS.Focus();
+            MoDieuKhien();
+            SetNull();
+            DoDLMaLop();
+            themmoi = true;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -153,7 +162,29 @@ namespace QLGVHS.GUI
             {
                 if (themmoi == true)/*đang ở trang thái thêm mới*/
                 {
-                    
+                    try
+                    {
+                        ectHS.MaHS = txtMaHS.Text;
+                        ectHS.TenHS = txtTen.Text;
+                        if (rdbNam.Checked) ectHS.GT = "Nam";
+                        else ectHS.GT = "Nu";
+                        ectHS.NgaySinh = dtpNgaySinh.Value.Year.ToString() + "-" + dtpNgaySinh.Value.Month.ToString() + "-" + dtpNgaySinh.Value.Day.ToString();
+                        ectHS.MaLop = cboMaLop.Text;
+                        ectHS.DiaChi = txtDiaChi.Text;
+                        ectHS.DanToc = cboDanToc.Text;
+                        ectHS.TonGiao = cboTonGiao.Text;
+
+                        busHS.addHocsinh(ectHS);
+                        MessageBox.Show("Đã thêm mới thành công");/*dòng thông báo*/
+                        //toolStripMenuItem1_Click(sender, e);
+                        txtMaHS.Enabled = false;
+                        SetNull();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Lỗi");
+                        return;
+                    }
 
                 }
                 else
@@ -190,8 +221,7 @@ namespace QLGVHS.GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
-            DialogResult xacnhan;
+                  DialogResult xacnhan;
             xacnhan = MessageBox.Show("Bạn có muốn xóa không??", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (xacnhan == DialogResult.OK)
             {
@@ -210,27 +240,165 @@ namespace QLGVHS.GUI
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Bạn có muốn Thoát hay không", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                btnThem.Enabled = true;
+                btnLuu.Enabled = false;
+                btnXoa.Enabled = true;
+                btnSua.Enabled = true;
+                SetNull();
+                KhoaDieuKhien();/*không cho thao tác*/
+                dgvHocSinh.DataSource = busHS.getAllHocsinh();
+            }
         }
 
         private void txtTimMaHS_TextChanged(object sender, EventArgs e)
         {
-
+            if (txtTimMaHS.Text != "") _dangTimMa = true;
+            else _dangTimMa = false;
+            string dieukien = "where MaHS like N'%" + txtTimMaHS.Text + "%'";
+           
+            if (_dangTimTen) dieukien += "AND TenHS like N'%" + txtTen.Text + "%'";
+            if (_dangTimMaLop)
+            {
+                if (cboTimMaLop.SelectedIndex != 0) dieukien += "AND MaLop like N'%" + cboTimDanToc.Text + "%'";
+            }
+            if (_dangTimDanToc)
+            {
+                if (cboTimDanToc.SelectedIndex != 0) dieukien += "AND DanToc like N'%" + cboTimDanToc.Text + "%'";
+            }
+           
+            DataTable tbl = busHS.getHocsinh(dieukien);
+            dgvHocSinh.DataSource = tbl;
         }
 
         private void txtTimTenHS_TextChanged(object sender, EventArgs e)
         {
-
+            if (txtTimTenHS.Text != "") _dangTimTen = true;
+            else _dangTimTen = false;
+            string dieukien = "where TenHS like N'%" + txtTimTenHS.Text + "%'";
+            if (_dangTimMa) dieukien += "AND MaHS like N'%" + txtMaHS.Text + "%'";
+            if (_dangTimTen) dieukien += "AND TenHS like N'%" + txtTen.Text + "%'";
+            if (_dangTimMaLop)
+            {
+                if (cboTimMaLop.SelectedIndex != 0) dieukien += "AND MaLop like N'%" + cboTimMaLop.Text + "%'";
+            }
+            if (_dangTimDanToc)
+            {
+                if (cboTimDanToc.SelectedIndex != 0) dieukien += "AND DanToc like N'%" + cboTimDanToc.Text + "%'";
+            }
+            
+            DataTable tbl = busHS.getHocsinh(dieukien);
+            dgvHocSinh.DataSource = tbl;
         }
 
         private void cboTimMaLop_TextChanged(object sender, EventArgs e)
         {
 
+            if (cboTimMaLop.SelectedIndex != 0) _dangTimMaLop = true;
+            else _dangTimMaLop = false;
+            string dieukien = "";
+            if (cboTimMaLop.SelectedIndex == 0) dieukien = "where MaLop like N'%'";
+            else dieukien = "where MaLop like N'%" + cboTimMaLop.Text + "%'";
+            if (_dangTimMa) dieukien += "AND MaHS like N'%" + txtMaHS.Text + "%'";
+            
+            if (_dangTimDanToc)
+            {
+                if (cboTimDanToc.SelectedIndex != 0) dieukien += "AND DanToc like N'%" + cboTimDanToc.Text + "%'";
+            }
+            DataTable tbl = busHS.getHocsinh(dieukien);
+            dgvHocSinh.DataSource = tbl;
         }
 
         private void cboTimDanToc_TextChanged(object sender, EventArgs e)
         {
 
+            if (cboTimDanToc.SelectedIndex != 0) _dangTimDanToc = true;
+            else _dangTimDanToc = false;
+            string dieukien = "";
+            if (cboTimDanToc.SelectedIndex == 0) dieukien = "where DanToc like N'%'";
+            else dieukien = "where DanToc like N'%" + cboTimDanToc.Text + "%'";
+            if (_dangTimMa) dieukien += "AND MaHS like N'%" + txtMaHS.Text + "%'";
+           
+            if (_dangTimMaLop)
+            {
+                if (cboTimMaLop.SelectedIndex != 0) dieukien += "AND MaLop like N'%" + cboTimMaLop.Text + "%'";
+            }
+            
+            DataTable tbl = busHS.getHocsinh(dieukien);
+            dgvHocSinh.DataSource = tbl;
+        }
+
+        private void txtTimMaHS_Click(object sender, EventArgs e)
+        {
+            txtTimMaHS.Text = "";
+            if (_dangTimMa)
+            {
+                txtTimMaHS.SelectionStart = txtTimMaHS.Text.Length;
+            }
+            else
+            {
+                txtTimMaHS.SelectAll();
+            }
+        }
+
+        private void txtTimTenHS_Click(object sender, EventArgs e)
+        {
+            txtTimTenHS.Text = "";
+            if (_dangTimTen)
+            {
+                txtTimTenHS.SelectionStart = txtTimTenHS.Text.Length;
+            }
+            else
+            {
+                txtTimTenHS.SelectAll();
+            }
+        }
+
+        private void cboTimMaLop_Click(object sender, EventArgs e)
+        {
+            cboTimMaLop.SelectionStart = cboTimMaLop.Text.Length;
+            BUS_tblHocSinh busHs = new BUS_tblHocSinh();
+            DataTable tb = busHs.getField("MaLop");
+            cboTimMaLop.Items.Clear();
+            cboTimMaLop.Items.Add("Tất cả");
+            for (int i = 0; i < tb.Rows.Count; i++)
+            {
+                cboTimMaLop.Items.Add(tb.Rows[i]["MaLop"].ToString());
+            }
+        }
+
+        private void cboTimDanToc_Click(object sender, EventArgs e)
+        {
+            cboTimDanToc.SelectionStart = cboTimDanToc.Text.Length;
+            BUS_tblHocSinh busHs = new BUS_tblHocSinh();
+            DataTable tb = busHs.getField("DanToc");
+            cboTimDanToc.Items.Clear();
+            cboTimDanToc.Items.Add("Tất cả");
+            for (int i = 0; i < tb.Rows.Count; i++)
+            {
+                cboTimDanToc.Items.Add(tb.Rows[i]["DanToc"].ToString());
+            }
+        }
+
+        private void txtTimMaHS_Enter(object sender, EventArgs e)
+        {
+            txtMaHS.SelectionStart = txtMaHS.Text.Length;
+        }
+
+        private void txtTimTenHS_Enter(object sender, EventArgs e)
+        {
+            txtTen.SelectionStart = txtTen.Text.Length;
+        }
+
+        private void cboTimMaLop_Enter(object sender, EventArgs e)
+        {
+            cboMaLop.SelectionStart = cboMaLop.Text.Length;
+        }
+
+        private void cboTimDanToc_Enter(object sender, EventArgs e)
+        {
+            cboDanToc.SelectionStart = cboDanToc.Text.Length;
         }
     }
 }
