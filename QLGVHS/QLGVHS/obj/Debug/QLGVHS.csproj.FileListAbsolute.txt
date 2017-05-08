@@ -14,3 +14,19 @@ c:\users\adida\onedrive\tài liệu\visual studio 2015\Projects\QLGVHS\QLGVHS\
 c:\users\adida\onedrive\tài liệu\visual studio 2015\Projects\QLGVHS\QLGVHS\obj\Debug\QLGVHS.GUI.frmThemtaikhoan.resources
 c:\users\adida\onedrive\tài liệu\visual studio 2015\Projects\QLGVHS\QLGVHS\obj\Debug\QLGVHS.GUI.frmTKB.resources
 c:\users\adida\onedrive\tài liệu\visual studio 2015\Projects\QLGVHS\QLGVHS\obj\Debug\QLGVHS.GUI.frmMain.resources
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\bin\Debug\QLGVHS.exe.config
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\obj\Debug\QLGVHS.exe
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\obj\Debug\QLGVHS.pdb
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\bin\Debug\QLGVHS.exe
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\bin\Debug\QLGVHS.pdb
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\obj\Debug\QLGVHS.csprojResolveAssemblyReference.cache
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\obj\Debug\QLGVHS.GUI.frmDangnhap.resources
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\obj\Debug\QLGVHS.GUI.frmGiaoVien.resources
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\obj\Debug\QLGVHS.GUI.frmHocsinh.resources
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\obj\Debug\QLGVHS.GUI.frmMain.resources
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\obj\Debug\QLGVHS.GUI.frmQLGD.resources
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\obj\Debug\QLGVHS.GUI.frmQuantri.resources
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\obj\Debug\QLGVHS.GUI.frmThemtaikhoan.resources
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\obj\Debug\QLGVHS.GUI.frmTKB.resources
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\obj\Debug\QLGVHS.Properties.Resources.resources
+C:\Users\adida\OneDrive\Tài liệu\GitHub\QuanLyGV-HS\QLGVHS\QLGVHS\obj\Debug\QLGVHS.csproj.GenerateResource.Cache
